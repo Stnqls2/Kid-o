@@ -4,6 +4,16 @@ const app = express();
 
 app.set("port", 3000);
 
+//*router 설정 */
+const indexRouter = require("./routes/index");
+
+const indexRou = require("./routes/jam");
+
+/** router 연결 */
+app.use("/index", indexRouter)
+
+app.use ("/jam", indexRou)
+
 app.get("/", (req, res) => {
 
     res.send("Hello World");
