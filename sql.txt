@@ -1,0 +1,11 @@
+select(조회할때)
+ㄴselect phone, age, name form phone 
+(*<< 이거 써주면 모든 열 조회 가능)
+
+where(조건)(like if문법)
+
+
+insert  (입력)
+ㄴinsert into phone(name, phone, age) valuses('사사사', 01012341234, 20)
+
+로그인 페이지 만들기
