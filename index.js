@@ -1,6 +1,8 @@
 const express = require("express");
 
 const app = express();
+//*router 설정 */
+const indexRouter = require("./routes");
 
 const engine = require("ejs")
 
@@ -22,30 +24,29 @@ const config = {
 
 const pool = mysql.createPool(config);
 
-pool.getConnection((err, conn) => {
+// pool.getConnection((err, conn) => {
 
-    if(!err) {
-        conn.query("insert into phone values(?, ?, ?)", 
-            ['최범규', '01022222222', 24],
-            (err, result) => {
-            console.log(result);
-            if (err) console.log(err)
-                else console.log(true)
+//     if(!err) {
+//         conn.query("insert into phone values(?, ?, ?)", 
+//             ['최범규', '01022222222', 24],
+//             (err, result) => {
+//             console.log(result);
+//             if (err) console.log(err)
+//                 else console.log(true)
 
-        });
-    }
-    else {
-        console.log(err)
-    }
+//         });
+//     }
+//     else {
+//         console.log(err)
+//     }
 
-    conn.release();
+//     conn.release();
 
-})
+// })
 //server port설정 
 app.set("port", 3000);
 
-//*router 설정 */
-const indexRouter = require("./routes");
+
 
 //const indexRou = require("./routes/jam");
 
