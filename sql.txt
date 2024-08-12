@@ -9,3 +9,5 @@ insert  (입력)
 ㄴinsert into phone(name, phone, age) valuses('사사사', 01012341234, 20)
 
 로그인 페이지 만들기
+
+회원가입창 , 회원정보 출력창
